@@ -1,16 +1,14 @@
-import { Home } from './pages/Home';
-import { Cart } from './pages/Cart';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { MainLayout } from './layouts/MainLauout';
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Outlet } from "react-router-dom";
+
+import { Footer } from "./components/Footer";
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path="cart" element={<Cart />} />
-        </Route>
-      </Routes>
+      <Header />
+      <Outlet />
+      <Footer />
     </>
   );
 }

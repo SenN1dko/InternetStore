@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axios from "axios";
 export const fetchProducts = async () => {
-  const res = await axios.get('http://localhost:3000/products');
+  const res = await axios.get("http://localhost:3000/products");
 
   return res.data;
 };

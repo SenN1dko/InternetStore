@@ -1,6 +1,5 @@
-import { Card } from '../components/Card';
-import { useProducts } from '../hooks/useProducts';
-import VideoComponent from '../components/VIedoComponent';
+import { Card } from "../components/Card";
+import { useProducts } from "../hooks/useProducts";
 export const Home = () => {
   const { products, isLoading, error } = useProducts();
 
@@ -12,7 +11,6 @@ export const Home = () => {
   return (
     <>
       <h1>Товары:</h1>
-      <VideoComponent />
       <div className="flex flex-wrap gap-5 justify-center">
         {products?.map((p) => (
           <Card key={p.id} id={p.id} product={p} />

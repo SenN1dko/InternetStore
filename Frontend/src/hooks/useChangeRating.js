@@ -1,4 +1,4 @@
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 export const useChangeRating = ({ id, rate, countOfRating }) => {
   const queryClient = useQueryClient();
@@ -9,9 +9,9 @@ export const useChangeRating = ({ id, rate, countOfRating }) => {
       const newCount = countOfRating + 1;
 
       const response = await fetch(`http://localhost:3000/products/${id}`, {
-        method: 'PATCH',
+        method: "PATCH",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify({
           rating: {
@@ -21,16 +21,14 @@ export const useChangeRating = ({ id, rate, countOfRating }) => {
         }),
       });
       if (!response.ok) {
-        throw new Error('ошибка при обновлении рейтинга');
+        throw new Error("ошибка при обновлении рейтинга");
       }
       return response.json();
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['product', id] });
-      queryClient.invalidateQueries({ queryKey: ['products'] });
+      queryClient.invalidateQueries({ queryKey: ["product", id] });
+      queryClient.invalidateQueries({ queryKey: ["products"] });
     },
   });
   return mutation;
 };
-
-

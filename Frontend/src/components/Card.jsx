@@ -1,11 +1,13 @@
-import { useState } from 'react';
-import { Rating } from 'react-simple-star-rating';
-import { useChangeRating } from '../hooks/useChangeRating';
+import { useState } from "react";
+import { Rating } from "react-simple-star-rating";
+import { useChangeRating } from "../hooks/useChangeRating";
 export const Card = ({ id, product }) => {
   const [isFullDescription, setIsFullDescription] = useState(false);
 
   const isLong = product.description.length > 40;
   const shortText = product.description.slice(0, 40);
+
+  console.log(p);
 
   const { rating } = product;
 
@@ -50,11 +52,11 @@ export const Card = ({ id, product }) => {
           </div>
 
           <h2 className="font-medium ">{product.title}</h2>
-          {/* <p>
+          <p>
             {isLong && !isFullDescription ? (
               <>
                 {shortText}
-                {'  '}
+                {"  "}
                 <button
                   className="text-blue-600 text-2xl cursor-pointer"
                   onClick={() => setIsFullDescription(true)}
@@ -65,7 +67,7 @@ export const Card = ({ id, product }) => {
             ) : (
               <>
                 {product.description}
-                {'  '}
+                {"  "}
                 <button
                   className="text-blue-600 text-2xl cursor-pointer"
                   onClick={() => setIsFullDescription(false)}
@@ -74,7 +76,7 @@ export const Card = ({ id, product }) => {
                 </button>
               </>
             )}
-          </p> */}
+          </p>
         </div>
         <button className="p-2 bg-yellow-300 font-bold hover:bg-yellow-400 transition-colors duration-150 cursor-pointer ease-in">
           Add to Cart
