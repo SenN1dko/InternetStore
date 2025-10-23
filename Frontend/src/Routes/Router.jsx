@@ -1,13 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Routes } from "../constats/Routes";
 import App from "../App";
+import ROUTES from "../constants/Routes";
+
 export const router = createBrowserRouter([
   {
     element: <App />,
     children: [
-      { path: Routes.HOME, lazy: () => import("../pages/Home") },
       {
-        path: Routes.CART,
+        path: ROUTES.HOME,
+        lazy: () => import("../pages/Home"),
+      },
+      {
+        path: ROUTES.CART,
         lazy: () => import("../pages/Cart"),
       },
     ],
