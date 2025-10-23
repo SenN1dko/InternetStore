@@ -1,7 +1,19 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --classic-mb: 1rem;
+  --color-d-bg: #111827; /* серо-чёрный фон (gray-900) */
+  --color-d-surface: #1f2937; /* серо-тёмный блоки (gray-800) */
+  --color-d-border: #374151; /* границы (gray-700) */
+  --color-d-text: #f9fafb; /* белый текст */
+  --color-d-muted: #9ca3af; /* светло-серый для описаний */
+
+  --color-d-primary: #34d399; /* emerald-400 — светлее, чтобы на тёмном выделялся */
+  --color-d-primary-hover: #10b981; /* emerald-500 */
+  --color-d-accent: #fcd34d; /* amber-300 */
+  --color-d-accent-hover: #fbbf24; /* amber-400 */
 }
 
 svg {

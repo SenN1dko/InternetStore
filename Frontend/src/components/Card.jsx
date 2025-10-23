@@ -20,13 +20,13 @@ export const Card = ({ id, product }) => {
   };
   return (
     <>
-      <div className="flex flex-col  ease-in max-w-[250px] w-full bg-white rounded-lg overflow-hidden ">
+      <div className="flex flex-col  ease-in max-w-[250px] w-full dark:bg-[var(--color-d-surface)] bg-[#ffffff] rounded-lg overflow-hidden ">
         <img
           className="bg-gray-100/90 rounded-xl w-full h-52 object-contain"
           src={product.image}
           alt="product"
         />
-        <div className="flex-grow item-center flex-col mb-2">
+        <div className="flex-grow p-2 item-center flex-col mb-2">
           <div className="flex  justify-between my-2">
             <p className="text-2xl font-bold">{product.price} ₸</p>
 

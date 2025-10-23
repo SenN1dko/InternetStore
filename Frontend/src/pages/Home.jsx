@@ -10,7 +10,6 @@ export const Home = () => {
 
   return (
     <>
-      <h1>Товары:</h1>
       <div className="flex flex-wrap gap-5 justify-center">
         {products?.map((p) => (
           <Card key={p.id} id={p.id} product={p} />

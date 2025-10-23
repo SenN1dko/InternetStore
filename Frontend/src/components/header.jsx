@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { ShoppingCart, Book } from "lucide-react";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 import ROUTES from "../constants/Routes";
 export const Header = () => {
   return (
     <>
-      <header className="bg-gray-800 text-white p-4 flex  mb-[var(--classic-mb)]  justify-between">
-        <h1 className="text-xl font-bold">Мой магазин</h1>
-        <nav className="flex gap-6">
+      <header className="dark:bg-[var(--d-bg)] bg-gray-400  p-4 flex  transition-all ease-in duration-200  justify-between">
+        <h1 className="text-xl  dark:text-[var(--d-text)] text-black font-bold">
+          Мой магазин
+        </h1>
+        <nav className="flex items-center gap-6">
           <Link to={ROUTES.HOME}>
             <Book
               className="hover:rotate-15 transition-transform duration-333 ease-in"
@@ -19,6 +22,7 @@ export const Header = () => {
               1
             </div>
           </Link>
+          <ThemeSwitcher />
         </nav>
       </header>
     </>
