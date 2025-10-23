@@ -7,8 +7,6 @@ export const Card = ({ id, product }) => {
   const isLong = product.description.length > 40;
   const shortText = product.description.slice(0, 40);
 
-  console.log(p);
-
   const { rating } = product;
 
   const mutation = useChangeRating({

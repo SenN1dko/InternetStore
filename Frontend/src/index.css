@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
+:root {
+  --classic-mb: 1rem;
+}
+
 svg {
   display: inline-block;
   vertical-align: middle;
+}
+/* 1. Устанавливаем body и #root на 100% высоты viewport */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
 }

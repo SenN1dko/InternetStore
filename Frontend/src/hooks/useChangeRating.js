@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-
+import { API_CONFIG } from "../constants/Api.jsx";
 export const useChangeRating = ({ id, rate, countOfRating }) => {
   const queryClient = useQueryClient();
 
@@ -8,7 +8,7 @@ export const useChangeRating = ({ id, rate, countOfRating }) => {
       const newRate = (rate * countOfRating + newVote) / (countOfRating + 1);
       const newCount = countOfRating + 1;
 
-      const response = await fetch(`http://localhost:3000/products/${id}`, {
+      const response = await fetch(API_CONFIG.productsEndpointId(id), {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

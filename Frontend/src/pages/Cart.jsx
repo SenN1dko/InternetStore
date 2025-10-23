@@ -1,7 +1,7 @@
 export const Cart = () => {
   return (
-    <>
-      <div>Корзина:</div>
-    </>
+    <div>
+      <h1>🛒 Cart Page</h1>
+    </div>
   );
 };

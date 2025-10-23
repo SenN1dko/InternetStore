@@ -4,7 +4,7 @@ import ROUTES from "../constants/Routes";
 export const Header = () => {
   return (
     <>
-      <header className="bg-gray-800 text-white p-4 flex justify-between">
+      <header className="bg-gray-800 text-white p-4 flex  mb-[var(--classic-mb)]  justify-between">
         <h1 className="text-xl font-bold">Мой магазин</h1>
         <nav className="flex gap-6">
           <Link to={ROUTES.HOME}>
